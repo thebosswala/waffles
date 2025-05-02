@@ -1,0 +1,228 @@
+/* Additional styles for the prizes page */
+.prizes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.prize-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.prize-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.prize-header {
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.first-prize .prize-header {
+  background: linear-gradient(135deg, #ffd700, #e4ac3a);
+  color: #fff;
+}
+
+.second-prize .prize-header {
+  background: linear-gradient(135deg, #c0c0c0, #a0a0a0);
+  color: #fff;
+}
+
+.third-prize .prize-header {
+  background: linear-gradient(135deg, #cd7f32, #a05a2c);
+  color: #fff;
+}
+
+.prize-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.prize-icon {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.prize-content {
+  padding: 1.5rem;
+}
+
+.special-prizes {
+  margin-top: 3rem;
+}
+
+.special-prizes h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.special-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.special-prize {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.special-prize:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.special-prize h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.participation-prize {
+  margin-top: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  text-align: center;
+}
+
+.participation-prize h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Styles for the Get Started page */
+.steps-list {
+  counter-reset: steps;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.steps-list li {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.steps-list li::before {
+  counter-increment: steps;
+  content: counter(steps);
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.steps-list h4 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.resources {
+  margin-top: 3rem;
+}
+
+.resources h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.resource-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.resource-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-card li {
+  margin-bottom: 0.5rem;
+}
+
+.resource-card a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.resource-card a:hover {
+  color: var(--accent-color);
+  background: rgba(214, 140, 38, 0.1);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.error-input {
+  border-color: #e74c3c !important;
+}
+
+/* Animation for the steps */
+.steps-list li {
+  transition: all 0.3s;
+}
+
+.steps-list li:hover {
+  transform: translateX(10px);
+}

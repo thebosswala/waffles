@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Waffles Event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/prize-styles.css">
+  <link rel="stylesheet" href="assets/css/coming-soon.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧇%3C/text%3E%3C/svg%3E">
+</head>
+<body onload="showRandomFact()">
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Waffles Event</h1>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="requirements.html">Requirements</a></li>
+          <li><a href="rules.html">Rules</a></li>
+          <li><a href="prizes.html">Prizes</a></li>
+          <li><a href="get-started.html">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="hero">
+      <h2>Join the Waffles Event!</h2>
+      <p>Submit your creative website and win amazing prizes! 🧇</p>
+      <p>The waffle theme is optional!</p>
+      <p id="fact" class="fact"></p>
+      <a href="get-started.html" class="btn">Get Started</a>
+    </section>
+    <section class="features">
+      <div class="feature">
+        <h3>Creative Designs</h3>
+        <p>Show off your best designs.</p>
+      </div>
+      <div class="feature">
+        <h3>Responsive Design</h3>
+        <p>Ensure your site looks good on any device.</p>
+      </div>
+      <div class="feature">
+        <h3>CSS Animations</h3>
+        <p>Impress with subtle and engaging animations.</p>
+      </div>
+      <div class="waffle-icon">🧇</div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Waffles Event</p>
+  </footer>
+  <script defer src="assets/js/script.js"></script>
+</body>
+</html>

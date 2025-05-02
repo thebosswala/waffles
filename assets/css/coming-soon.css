@@ -1,0 +1,206 @@
+/* Styles for Coming Soon pages and new Get Started layout */
+
+.coming-soon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.coming-soon {
+  text-align: center;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  max-width: 800px;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.coming-soon h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+}
+
+.coming-soon h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--waffle-light);
+}
+
+.coming-soon p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.prize-teaser {
+  margin: 2rem 0;
+}
+
+.prize-icon {
+  font-size: 3rem;
+  margin: 0 1rem;
+  display: inline-block;
+  animation: bounce 2s infinite alternate;
+}
+
+.prize-icon:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.prize-icon:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.hint {
+  font-style: italic;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Get Started Page Styles */
+.getting-started-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.getting-started-intro h3 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.getting-started-intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+}
+
+.how-to-participate {
+  margin-bottom: 3rem;
+}
+
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.idea-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.idea-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.idea-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.idea-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.tech-category {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.tech-category h4 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--waffle-light);
+}
+
+.tech-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-category li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--waffle-light);
+  transition: all 0.3s;
+}
+
+.tech-category li:hover {
+  padding-left: 10px;
+  color: var(--accent-color);
+}
+
+.tech-category li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .coming-soon {
+    padding: 2rem;
+  }
+  
+  .prize-icon {
+    font-size: 2.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .getting-started-intro h3 {
+    font-size: 1.5rem;
+  }
+  
+  .getting-started-intro p {
+    font-size: 1rem;
+  }
+}
