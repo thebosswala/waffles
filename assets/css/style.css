@@ -368,7 +368,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-/* Layout containers */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -379,7 +378,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* Centralize main content */
 .main-content {
   max-width: 1000px;
   margin: 3rem auto;
@@ -404,14 +402,12 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-5px);
 }
 
-/* Center key sections */
 .page-header,
 .hero,
 .features {
   text-align: center;
 }
 
-/* Additional styles for other pages */
 .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/waffle-bg.jpg');
   background-size: cover;

@@ -1,4 +1,3 @@
-// Waffle facts for the random fact generator
 const facts = [
   "Waffles originated in Belgium during the Middle Ages.",
   "The word 'waffle' comes from the Dutch word 'wafel'.",
@@ -12,9 +11,6 @@ const facts = [
   "The Brussels waffle is lighter and crispier than other varieties."
 ];
 
-/**
- * Displays a random waffle fact in the fact element
- */
 function showRandomFact() {
   const factElement = document.getElementById('fact');
   if (factElement) {
@@ -27,25 +23,15 @@ function showRandomFact() {
   }
 }
 
-/**
- * Toggles the mobile navigation menu
- */
 function toggleMenu() {
   const navList = document.querySelector('.nav-list');
   navList.classList.toggle('nav-open');
 }
 
-/**
- * Navigates to the specified page
- * @param {string} url - The URL to navigate to
- */
 function goToPage(url) {
   window.location.href = url;
 }
 
-/**
- * Highlights the active navigation link based on current page
- */
 function highlightActive() {
   const links = document.querySelectorAll('.nav-list a');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -59,10 +45,6 @@ function highlightActive() {
   });
 }
 
-/**
- * Validates the submission form
- * @returns {boolean} - Whether the form is valid
- */
 function validateForm() {
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
@@ -91,11 +73,6 @@ function validateForm() {
   return isValid;
 }
 
-/**
- * Shows an error message for an input field
- * @param {HTMLElement} input - The input element
- * @param {string} message - The error message
- */
 function showError(input, message) {
   const formGroup = input.parentElement;
   const errorElement = formGroup.querySelector('.error-message') || document.createElement('div');
@@ -117,26 +94,17 @@ function showError(input, message) {
   });
 }
 
-// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Show random fact if on homepage
   if (document.getElementById('fact')) {
     showRandomFact();
-    
-    // Change fact every 10 seconds
     setInterval(showRandomFact, 10000);
   }
-  
-  // Highlight active navigation link
   highlightActive();
-  
-  // Add event listener to navigation toggle button
   const navToggle = document.querySelector('.nav-toggle');
   if (navToggle) {
     navToggle.addEventListener('click', toggleMenu);
   }
   
-  // Add event listener to form submission if on get-started page
   const form = document.querySelector('.get-started-form');
   if (form) {
     form.addEventListener('submit', function(event) {
